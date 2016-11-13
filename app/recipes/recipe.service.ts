@@ -22,6 +22,14 @@ export class RecipeService {
   	return this.recipes;
   }
 
+  addRecipe(recipe: Recipe) {
+    this.recipes.push(recipe);
+  }
+
+  editRecipe(oldRecipe: Recipe, newRecipe: Recipe) {
+    this.recipes[this.recipes.indexOf((oldRecipe))] = newRecipe;
+  }
+
   getRecipe(id: number){
     return this.recipes[id];
   }
